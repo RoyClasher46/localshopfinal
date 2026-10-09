@@ -1,0 +1,35 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #01242c;
+  --color-primary-light: #0b3a43;
+
+  --color-accent: #ff8c00;
+  --color-accent-hover: #e67e00;
+
+  /* Backgrounds */
+  --color-background: #f8f4e9;
+  --color-surface: #ffffff;
+
+  /* Text */
+  --color-text-primary: #01242c;
+  --color-text-secondary: #64748b;
+  --color-text-white: #ffffff;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Layout */
+  --header-height: 52px;
+  --container-max-width: 1440px;
+}

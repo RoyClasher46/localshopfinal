@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import "./variables.css";
+
+/* Global styles */
+
+:root {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* Root application container */
+
+#root {
+  min-height: 100vh;
+}
+
+/* Text selection */
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* Focus accessibility */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Disabled elements */
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Smooth image rendering */
+
+img {
+  image-rendering: auto;
+}
+
+/* SIDEBAR SCROLLBAR */
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/*  MAPLIBRE SHOP POPUP */
+
+.shop-map-popup .maplibregl-popup-content {
+  position: relative;
+
+  padding: 14px 42px 14px 16px;
+
+  min-width: 140px;
+  max-width: 300px;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #022b3a;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*  POPUP ARROW */
+
+.shop-map-popup .maplibregl-popup-tip {
+  border-top-color: #ffffff;
+}
+
+/*  CLOSE BUTTON */
+
+.shop-map-popup .maplibregl-popup-close-button {
+  position: absolute;
+
+  top: 5px;
+  right: 6px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #022b3a;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+
+  line-height: 28px;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* CLOSE BUTTON HOVER */
+
+.shop-map-popup .maplibregl-popup-close-button:hover {
+  background-color: #f3f4f6;
+  color: #ff8c00;
+}
+
+/* CLOSE BUTTON FOCUS */
+
+.shop-map-popup .maplibregl-popup-close-button:focus {
+  outline: 2px solid #ff8c00;
+  outline-offset: 1px;
+}
+
+/* CLOSE BUTTON ACTIVE */
+
+.shop-map-popup .maplibregl-popup-close-button:active {
+  transform: scale(0.95);
+}
